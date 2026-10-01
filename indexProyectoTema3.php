@@ -198,7 +198,7 @@
         <address>
             <p>&copy; 2025-2026 <span><a href="../index.html">Juan Rivera Ordoñez</a></span>- I.E.S. Los Sauces</p>
             <p>Ultima actualización de la página: <time datetime="2026-09-30 12:40">30 de Septiembre de 2026 a las 12:40</time></p>
-            <p><a href="https://github.com/juanrivord?tab=repositories"><img src="./webroot/images/github.png" alt="Imagen de github"></a></p>
+            <p><a href="https://github.com/juanrivord/JRODWESProyectoTema3"><img src="./webroot/images/github.png" alt="Imagen de github"></a></p>
         </address>
     </footer>
 </body>

@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br>";
         //Poner la zona por defecto en Europa/Madrid
         date_default_timezone_set('Europe/Madrid');
         //Inicializar la variable $oFechaActual de tipo DateTime.

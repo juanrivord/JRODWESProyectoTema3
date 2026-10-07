@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br>";
     
         // Variable que almacena la funcion time()
         $tTimestamp = time();

@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br>";
         //Inicializar la variable $oFecha de tipo DateTime.
         $dFechaEspana = new DateTime(null, new DateTimeZone('Europe/Madrid'));
         $dFechaOporto = new DateTime(null, new DateTimeZone('Europe/Lisbon'));

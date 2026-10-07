@@ -72,8 +72,8 @@
                 <tr>
                     <td>7</td>
                     <td>Mostrar el nombre del fichero que se está ejecutando.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio07.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio07.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>8</td>

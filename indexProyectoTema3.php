@@ -53,21 +53,21 @@
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Mostrar en tu página index la fecha y hora actual en Oporto formateada en portugués.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td>Ejercicio mostrar en tu página index la fecha y hora actual en Oporto formateada en portugués</td>
+                    <td><a href="./codigoPHP/ejercicio04.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio04.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio05.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio05.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio06.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio06.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -197,7 +197,6 @@
     <footer>
         <address>
             <p>&copy; 2025-2026 <span><a href="../index.html">Juan Rivera Ordoñez</a></span>- I.E.S. Los Sauces</p>
-            <p>Ultima actualización de la página: <time datetime="2026-09-30 12:40">30 de Septiembre de 2026 a las 12:40</time></p>
             <p><a href="https://github.com/juanrivord/JRODWESProyectoTema3"><img src="./webroot/images/github.png" alt="Imagen de github"></a></p>
         </address>
     </footer>

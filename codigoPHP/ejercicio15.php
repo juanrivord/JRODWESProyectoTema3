@@ -20,7 +20,7 @@
         "Sabado" => 40,
         "Domingo" => 10];
         $fSueldoSemanal = 0.0;
-        $fSueldoSemanalNuevo = 0;
+        $fSueldoSemanalNuevo = 0.0;
 
         foreach ($aSueldosPercibidos as $sueldo) {
             $fSueldoSemanal+=$sueldo;

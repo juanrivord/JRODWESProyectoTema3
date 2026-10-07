@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     </head>
     <body>
         <?php
-        $archivo = '../codigoPHP/ejercicio14.php';
+        $archivo = '../codigoPHP/ejercicio15.php';
  
         if ($archivo && file_exists($archivo)) {
         echo "<h2>Viendo el codigo de: " . htmlspecialchars($archivo) . "</h2>";

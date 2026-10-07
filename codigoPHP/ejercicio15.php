@@ -11,28 +11,35 @@
         echo("<h2>Array normal</h2>");
         
         $aSueldosPercibidos=[25,30,35,20,15,40,50];
-        $aSueldosPercibidosAsociativo = ["Lunes" => 50,"Martes" => 60,"Miercoles" => 55,"Jueves" => 56,"Viernes" => 20,"Sabado" => 40,"Domingo" => 10];
-        $iAcumulador = 0;
-        $iAcumuladorNuevo = 0;
+        $aSueldosPercibidosAsociativo = [
+        "Lunes" => 50,
+        "Martes" => 60,
+        "Miercoles" => 55,
+        "Jueves" => 56,
+        "Viernes" => 20,
+        "Sabado" => 40,
+        "Domingo" => 10];
+        $fSueldoSemanal = 0.0;
+        $fSueldoSemanalNuevo = 0;
 
-        foreach ($aSueldosPercibidos as $value) {
-            $iAcumulador+=$value;
+        foreach ($aSueldosPercibidos as $sueldo) {
+            $fSueldoSemanal+=$sueldo;
         }
 
-        echo("El valor percibido es una semana es: ".$iAcumulador."€");
+        echo("El valor percibido es una semana es: ".$fSueldoSemanal."€");
 
         echo("<hr>");
 
         echo("<h2>Array asociativo</h2>");
 
-        foreach ($aSueldosPercibidosAsociativo as $key => $value) {
-            echo("El <strong>".$key."</strong> ha ganado: ".$value."<br>");
-            $iAcumuladorNuevo += $value;
+        foreach ($aSueldosPercibidosAsociativo as $dia => $sueldo) {
+            echo("El <strong>".$dia."</strong> ha ganado: ".$sueldo."<br>");
+            $fSueldoSemanalNuevo += $sueldo;
         }
 
-        echo("El valor total percibido es una semana es: ".$iAcumuladorNuevo."€");
+        echo("<br>");
 
-
+        echo("El valor total percibido es una semana es: ".$fSueldoSemanalNuevo."€");
         ?>
     </body>
 </html>

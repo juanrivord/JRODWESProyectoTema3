@@ -120,8 +120,8 @@
                 <tr>
                     <td>15</td>
                     <td>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la semana.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio15.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio15.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>16</td>

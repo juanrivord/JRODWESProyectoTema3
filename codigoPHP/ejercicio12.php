@@ -8,6 +8,8 @@
         <?php
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br>";
 
+        //POR ACABAR
+
             echo "<h2>Lista de variables en \$_SERVER<h2>";
 
             foreach ($_SERVER as $clave => $valor) {

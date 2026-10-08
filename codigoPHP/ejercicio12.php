@@ -10,13 +10,10 @@
 
             echo "<h2>Lista de variables en \$_SERVER<h2>";
 
-            echo "<ul>";
-
             foreach ($_SERVER as $clave => $valor) {
-                echo "<li>$clave: is_array($valor) ? json_encode($valor) : $valor</li>";
+                echo "\$_SERVER['" .$clave. "']: ". $valor."<br>";
             }
 
-            echo "</ul>";
         ?>
     </body>
 </html>

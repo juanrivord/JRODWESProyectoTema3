@@ -6,10 +6,10 @@
     </head>
     <body>
         <?php
-        echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br>";
+        echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
 
         date_default_timezone_set('Europe/Madrid');
-        $dFechaActual = new DateTime();
+        $dFechaAlta = new DateTime();
         ?>
 
         <form name="formularioProductos" action="<?php $_SERVER['PHP_SELF']?>" method="post">
@@ -26,24 +26,20 @@
             <input type="submit" value="Enviar" />
 
         <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $sNombre = $_REQUEST['nombre'];
+            $iSueldo = $_REQUEST['sueldo'];
+            $sFechaInput = $_REQUEST['fechaAlta']; 
+            $oFechaAlta = new DateTime($sFechaInput);
 
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                $sNombre = $_REQUEST['nombre'];
-                $iSueldo = $_REQUEST['sueldo'];
-                $dFechaAlta = $_REQUEST['fechaAlta'];
-
-                echo("<h2>RESULTADOS DEL FORMULARIO</h2>");
-
-                echo("<br>");
-                print "Nombre: ".$sNombre;
-                echo("<br>");
-                print "Sueldo: ".$iSueldo;
-                echo("<br>");
-                print "Fecha de Alta: ".$dFechaAlta;
-            }
-
-            
-        ?>
+            echo("<h2>RESULTADOS DEL FORMULARIO</h2>");
+            print "Nombre: " . $sNombre;
+            echo("<br>");
+            print "Sueldo: " . $iSueldo;
+            echo("<br>");
+            print 'Fecha de alta: ' . $oFechaAlta->format("d") . ' de ' . $oFechaAlta->format("M") . ' de ' . $oFechaAlta->format("Y");
+        }
+    ?>
 
         </form>
 

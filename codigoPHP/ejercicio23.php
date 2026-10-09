@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        // POR ACABAR
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
 
         date_default_timezone_set('Europe/Madrid');
@@ -23,7 +24,7 @@
             <label>Fecha del alta del alumno: </label>
             <input type="date" name="fechaAlta" id="fechaAlta" value="<?php echo (isset($_REQUEST['fecha'])?$_REQUEST['fecha']:''); ?>">
             <br>
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="enviar" />
 
         <?php
         if (isset($_POST['enviar'])) {
@@ -38,6 +39,8 @@
             print "Sueldo: " . $iSueldo;
             echo("<br>");
             print 'Fecha de alta: ' . $oFechaAlta->format("d") . ' de ' . $oFechaAlta->format("M") . ' de ' . $oFechaAlta->format("Y");
+        } else{
+
         }
     ?>
 

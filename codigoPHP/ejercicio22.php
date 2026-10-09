@@ -11,7 +11,8 @@
         date_default_timezone_set('Europe/Madrid');
         $dFechaActual = new DateTime();
         ?>
-        <form name="formularioProductos" action="" method="post">
+
+        <form name="formularioProductos" action="<?php $_SERVER['PHP_SELF']?>" method="post">
 
             <label>Nombre del alumno: </label>
             <input type="text" name="nombre" id="nombre" value="<?php echo (isset($_REQUEST['nombre'])?$_REQUEST['nombre']:'Juan'); ?>">
@@ -24,6 +25,25 @@
             <br>
             <input type="submit" value="Enviar" />
 
+        <?php
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $sNombre = $_REQUEST['nombre'];
+                $iSueldo = $_REQUEST['sueldo'];
+                $dFechaAlta = $_REQUEST['fechaAlta'];
+
+                echo("<h2>RESULTADOS DEL FORMULARIO</h2>");
+
+                echo("<br>");
+                print "Nombre: ".$sNombre;
+                echo("<br>");
+                print "Sueldo: ".$iSueldo;
+                echo("<br>");
+                print "Fecha de Alta: ".$dFechaAlta;
+            }
+
+            
+        ?>
 
         </form>
 

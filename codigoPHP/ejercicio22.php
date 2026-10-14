@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <?php require_once '../core/231018libreriaValidacion.php'; ?>
     </head>
     <body>
          <?php

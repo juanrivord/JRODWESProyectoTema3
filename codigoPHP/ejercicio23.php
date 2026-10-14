@@ -3,81 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <?php require_once '../core/231018libreriaValidacion.php'; ?>
     </head>
     <body>
         <?php
+        require_once '../core/231018libreriaValidacion.php'; 
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
-
-
-        // Inicialización de variables
-        date_default_timezone_set('Europe/Madrid');
-        $dFechaAlta = new DateTime(); // Variable de fecha de alta, inicializada como fecha
-        $entradaOK = true; // Variable que nos indica que todo va bien
-        //Array donde recogemos los mensajes de error
-            $aErrores = [
-                'nombre' => "",
-                'sueldo' => "",
-                'fechaAlta' => ""];
-            //Array donde recogemos la respuestas correctas
-            $aRespuestas = [
-                'nombre' => "",
-                'sueldo' => "",
-                'fechaAlta' => ""];
-        ?>
-
-        <form name="formularioProductos" action="<?php $_SERVER['PHP_SELF']?>" method="post">
-
-            <label>Nombre del alumno: </label>
-            <input type="text" name="nombre" id="nombre" value="<?php echo (isset($_REQUEST['nombre'])?$_REQUEST['nombre']:'Juan'); ?>">
-            <br>
-            <label>Sueldo del alumno: </label>
-            <input type="text" name="sueldo" id="sueldo" value="<?php echo (isset($_REQUEST['sueldo'])?$_REQUEST['sueldo']:'25'); ?>">
-            <br>
-            <label>Fecha del alta del alumno: </label>
-            <input type="date" name="fechaAlta" id="fechaAlta" value="<?php echo (isset($_REQUEST['fecha'])?$_REQUEST['fecha']:''); ?>">
-            <br>
-            <input type="submit" value="enviar" />
-
-        <?php
-        if (isset($_POST['enviar'])) {
-
-        // Validar Entrada
-
-            $aErrores["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"]);
-
-
-            foreach ($aErrores as $campo => $valor) {
-                if(!empty($valor)) $entradaOK = false; // Encontramos un error
-            }
-
-        // El formulario no se envia
-        }else {
-            $entradaOK = false;
-        }
-
-        // Tratamiento del formulario
-
-        if($entradaOK){
-            // Cargar la variable $aRespuestas y tratamiento de datos OK
-
-
-        // Mostrar formulario hasta que se rellene correctamente
-        }else{
-
-        }
-
-        
-
-
-
-
-
-
-
-
-        /*
-        <?php
             //Inicializacion de variables
             $entradaOK = true; // Variable que nos indica que todo va bien
             //Array donde recogemos los mensajes de error
@@ -159,8 +89,6 @@
                 <?php
             }
             ?>
-            */
-        ?>
 
         </form>
 

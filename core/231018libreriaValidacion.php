@@ -5,7 +5,7 @@
  *
  * Fichero con la clase validacionFormulario, que contiene funciones para validar los campos de los formularios
  *
- * @require PHP version 7.0
+ * @requires PHP version 7.0
  * @dependency mbstring
  */
 

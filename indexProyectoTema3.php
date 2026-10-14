@@ -168,8 +168,8 @@
                 <tr>
                     <td>23</td>
                     <td>Idem 22. En el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio23.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio23.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>24</td>

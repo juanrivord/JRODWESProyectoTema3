@@ -36,9 +36,7 @@
                 $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],date("Y-m-d H:i:s"),"1900-01-01 00:00:00", 1);
 
                 foreach ($aError as $value) {
-                    if (!empty($value)) {
-                        $entradaOK = false;
-                    }
+                    if (!empty($value)) $entradaOK = false;
                 }
             }
 
@@ -67,9 +65,7 @@
                     <input type="text" name="nombre" id="nombre" value="<?php echo (isset($_REQUEST['nombre'])?$_REQUEST['nombre']:''); ?>"/>
 
                     <?php
-                    if (!empty($aError["nombre"])) {
-                        echo "<span style='color:red;'>" . $aError['nombre'] . "</span>";
-                    }
+                    if (!empty($aError["nombre"])) echo "<span style='color:red;'>" . $aError['nombre'] . "</span>";
                     ?>
 
                     <br/>
@@ -77,9 +73,7 @@
                     <input type="text" name="apellido" id="apellido" value="<?php echo (isset($_REQUEST['apellido'])?$_REQUEST['apellido']:''); ?>"/>
 
                     <?php
-                    if (!empty($aError["apellido"])) {
-                        echo "<span style='color:red;'>" . $aError['apellido'] . "</span>";
-                    }
+                    if (!empty($aError["apellido"])) echo "<span style='color:red;'>" . $aError['apellido'] . "</span>";
                     ?>
 
                     <br/>
@@ -87,9 +81,7 @@
                     <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo (isset($_REQUEST['fechaNacimiento'])?$_REQUEST['fechaNacimiento']:''); ?>"/>
 
                     <?php
-                    if (!empty($aError["fechaNacimiento"])) {
-                        echo "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>";
-                    }
+                    if (!empty($aError["fechaNacimiento"])) echo "<span style='color:red;'>" . $aError['fechaNacimiento'] . "</span>";
                     ?>
 
                     <br/>

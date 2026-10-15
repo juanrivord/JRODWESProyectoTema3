@@ -11,6 +11,9 @@
 
         if (date_default_timezone_get()!="Europe/Madrid") date_default_timezone_set("Europe/Madrid");
 
+        // Falta por probar mas tipos de datos, (float)
+        // Falta poner los colores de obligatorio,opcional y bloqueado
+
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
             //Inicializacion de variables
             $entradaOK = true; // Variable que nos indica que todo va bien

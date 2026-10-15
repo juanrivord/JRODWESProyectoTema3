@@ -8,6 +8,9 @@
 
         <?php
         require_once '../core/231018libreriaValidacion.php'; 
+
+        if (date_default_timezone_get()!="Europe/Madrid") date_default_timezone_set("Europe/Madrid");
+
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
             //Inicializacion de variables
             $entradaOK = true; // Variable que nos indica que todo va bien
@@ -23,16 +26,14 @@
                 'fechaNacimiento' => ""];
 
             // Comprueba si el formulario se a enviado
-            if (isset($_POST["enviar"])) {
+            if (isset($_REQUEST["enviar"])) {
                 // Validar Entrada
                 
-                $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_POST["nombre"],1000,1,1);
-                $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_POST["apellido"],1000,1,1);
-                date_default_timezone_set("Europe/Madrid"); // No se si esto es necesario, pero lo pongo por si acaso
-                
+                $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST["nombre"],1000,1,1);
+                $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_REQUEST["apellido"],1000,1,1);                
                 // la funcion date devuelve la asignacion de hoy con el formato que le pongamos, con parametro 0 devuelve la fecha mínima aceptada, en este caso
                 // no queremos la fecha mínima, sino un año desde el 1900, ya que estamos validando fechas de nacimiento
-                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_POST["fechaNacimiento"],date("Y-m-d H:i:s"),"1900-01-01 00:00:00", 1);
+                $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],date("Y-m-d H:i:s"),"1900-01-01 00:00:00", 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) {
@@ -48,8 +49,8 @@
 
             if ($entradaOK) {
                 //Cargar la variable $aRespuestas y tratamiento de datos OK
-                $aRespuesta["nombre"] = htmlspecialchars($_POST["nombre"]);
-                $aRespuesta["apellido"] = htmlspecialchars($_POST["apellido"]);
+                $aRespuesta["nombre"] = htmlspecialchars($_REQUEST["nombre"]);
+                $aRespuesta["apellido"] = htmlspecialchars($_REQUEST["apellido"]);
                 $aRespuesta["fechaNacimiento"] = new DateTime($aRespuesta["fechaNacimiento"]);
 
                 echo '<h3> Formulario Tratamiento</h3>';
@@ -60,7 +61,7 @@
 
                 // Mostrar Formulario
                 ?>
-                    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="post" novalidate>
+                    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="REQUEST" novalidate>
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     <input type="text" name="nombre" id="nombre" value="<?php echo (isset($_REQUEST['nombre'])?$_REQUEST['nombre']:''); ?>"/>

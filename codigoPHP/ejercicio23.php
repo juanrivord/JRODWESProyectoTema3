@@ -5,6 +5,7 @@
         <title></title>
     </head>
     <body>
+
         <?php
         require_once '../core/231018libreriaValidacion.php'; 
         echo "<a href='../indexProyectoTema3.php'>⬅ Volver al inicio</a><br><br>";
@@ -24,8 +25,6 @@
             // Comprueba si el formulario se a enviado
             if (isset($_POST["enviar"])) {
                 // Validar Entrada
-                // $oFechaHoraActual= new DateTime();
-                //$oFechaHoraActual->format("d/m/Y")
                 
                 $aError["nombre"] = validacionFormularios::comprobarAlfabetico($_POST["nombre"],1000,1,1);
                 $aError["apellido"] = validacionFormularios::comprobarAlfabetico($_POST["apellido"],1000,1,1);
@@ -55,9 +54,12 @@
                 echo '<p>Apellido: ' . $aRespuesta["apellido"] . '</p>';
                 echo '<p>Fecha de Nacimiento: ' . $oFechaNacimientoDateTime->format("d/m/Y") . '</p>';
             } else {
+
+
+
                 // Mostrar Formulario
                 ?>
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="post" novalidate>
+                    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" name="formulario" method="post" novalidate>
                     <h3>Formulario: Tratamiento</h3>
                     <label for="nombre" >Nombre:</label>
                     <input type="text" name="nombre" id="nombre"/>

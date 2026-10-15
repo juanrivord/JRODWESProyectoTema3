@@ -174,8 +174,8 @@
                 <tr>
                     <td>24</td>
                     <td>Idem 23. Pero las respuestas que habíamos tecleado correctamente aparecerán en el formulario y no tendremos que volver a teclearlas.</td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
-                    <td><a class="bloqueado">Bloqueado</a></td>
+                    <td><a href="./codigoPHP/ejercicio24.php" class="btn btn-ejecutar">Ejecutar</a></td>
+                    <td><a href="./mostrarcodigo/muestraEjercicio24.php" class="btn btn-codigo">Mostrar código</a></td>
                 </tr>
                 <tr>
                     <td>25</td>

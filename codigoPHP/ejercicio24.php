@@ -39,7 +39,7 @@
                 // la funcion date devuelve la asignacion de hoy con el formato que le pongamos, con parametro 0 devuelve la fecha mínima aceptada, en este caso
                 // no queremos la fecha mínima, sino un año desde el 1900, ya que estamos validando fechas de nacimiento
                 $aError["fechaNacimiento"] = validacionFormularios::validarFecha($_REQUEST["fechaNacimiento"],date("Y-m-d H:i:s"),"1900-01-01 00:00:00", 1);
-                $aError['sueldo'] = validacionFormularios::comprobarFloat($_REQUEST['sueldo'], 10000, 0, 1);
+                $aError['sueldo'] = validacionFormularios::comprobarFloat($_REQUEST['sueldo'], PHP_FLOAT_MAX, 0, 1);
 
                 foreach ($aError as $value) {
                     if (!empty($value)) $entradaOK = false;
